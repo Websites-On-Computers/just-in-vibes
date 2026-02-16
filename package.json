@@ -10,8 +10,16 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/websitesoncomputers/just-in-vibes.git"
+  },
+  "homepage": "https://github.com/websitesoncomputers/just-in-vibes#readme",
+  "bugs": {
+    "url": "https://github.com/websitesoncomputers/just-in-vibes/issues"
+  },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && cp src/index.d.ts dist/index.d.ts",
     "dev": "rollup -c -w",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -29,7 +37,7 @@
     "anthropic",
     "gemini"
   ],
-  "author": "",
+  "author": "Websites On Computers <matt@matt.computer>",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
