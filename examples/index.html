@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>just-in-vibes demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid #333;
+    }
+    .card h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>just-in-vibes</h1>
+  <p class="subtitle">UI components compiled from vibes, not code</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>counter.vibe</h2>
+      <vibe-component src="counter.vibe"></vibe-component>
+    </div>
+
+    <div class="card">
+      <h2>todo.vibe</h2>
+      <vibe-component src="todo.vibe"></vibe-component>
+    </div>
+
+    <div class="card">
+      <h2>weather-card.vibe</h2>
+      <vibe-component src="weather-card.vibe"></vibe-component>
+    </div>
+
+    <div class="card">
+      <h2>inline vibe</h2>
+      <vibe-component>
+        A big friendly greeting that says "Hello from the vibes dimension!"
+        in a playful, bouncy animated style. Use CSS keyframe animations
+        to make the text gently float up and down. Purple and pink gradient text.
+      </vibe-component>
+    </div>
+  </div>
+
+  <!-- Load the library -->
+  <script src="../dist/just-in-vibes.umd.js"></script>
+  <script>
+    // Configure and boot
+    const engine = JustInVibes.createVibeEngine({
+      provider: JustInVibes.openai({
+        apiKey: 'YOUR_API_KEY_HERE', // Replace with your key
+        model: 'gpt-4o-mini',
+      }),
+      debug: true,
+    });
+
+    engine.init();
+  </script>
+</body>
+</html>

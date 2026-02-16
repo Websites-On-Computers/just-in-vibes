@@ -1,0 +1,39 @@
+{
+  "name": "just-in-vibes",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Write .vibe files with plain text prompts. An LLM builds your frontend.",
+  "main": "dist/just-in-vibes.cjs.js",
+  "module": "dist/just-in-vibes.esm.js",
+  "browser": "dist/just-in-vibes.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "vibe",
+    "vibes",
+    "vibe-coding",
+    "llm",
+    "ai",
+    "frontend",
+    "generative-ui",
+    "openai",
+    "anthropic",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.0",
+    "vitest": "^2.0.0"
+  }
+}

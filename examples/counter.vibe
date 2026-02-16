@@ -1,0 +1,4 @@
+A simple counter component with a large number display and two buttons: "+" and "-".
+The counter should start at 0. Style it with a clean, modern look — centered on the page,
+rounded buttons with hover effects, and a big bold number. Use a nice sans-serif font.
+Make it colorful and fun.

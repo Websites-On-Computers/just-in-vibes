@@ -1,0 +1,8 @@
+A fully functional todo list app. It should have:
+- An input field with a placeholder "What needs to be done?"
+- An "Add" button next to the input
+- A list of todos below, each with a checkbox to mark complete and a delete button
+- Completed todos should have a strikethrough style
+- A footer showing the count of remaining items
+- All state managed in JavaScript, no external dependencies
+- Clean minimal design with subtle shadows and rounded corners
